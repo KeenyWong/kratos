@@ -1,8 +1,9 @@
 package toml
 
 import (
-	"github.com/go-kratos/kratos/v2/config/parser"
 	"github.com/pelletier/go-toml"
+
+	"github.com/go-kratos/kratos/v2/config/parser"
 )
 
 type tomlParser struct{}

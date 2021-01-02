@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/go-kratos/kratos/cmd/kratos/internal/new"
-	"github.com/go-kratos/kratos/cmd/kratos/internal/proto"
 	"github.com/spf13/cobra"
+
+	"github.com/go-kratos/kratos/v2/cmd/kratos/internal/new"
+	"github.com/go-kratos/kratos/v2/cmd/kratos/internal/proto"
 )
 
 var rootCmd = &cobra.Command{

@@ -2,7 +2,7 @@ package grpc
 
 import "context"
 
-// ServerInfo is HTTP server infomation.
+// ServerInfo is HTTP server information.
 type ServerInfo struct {
 	// Server is the service implementation the user provides. This is read-only.
 	Server interface{}

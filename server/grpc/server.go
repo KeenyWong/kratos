@@ -4,8 +4,9 @@ import (
 	"context"
 	"net"
 
-	"github.com/go-kratos/kratos/v2/server"
 	"google.golang.org/grpc"
+
+	"github.com/go-kratos/kratos/v2/server"
 )
 
 var _ server.Server = new(Server)

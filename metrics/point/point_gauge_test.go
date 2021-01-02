@@ -3,8 +3,9 @@ package point
 import (
 	"testing"
 
-	"github.com/go-kratos/kratos/v2/metrics/rolling"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/go-kratos/kratos/v2/metrics/rolling"
 )
 
 func TestPointGaugeAdd(t *testing.T) {

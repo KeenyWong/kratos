@@ -2,6 +2,7 @@ package yaml
 
 import (
 	"github.com/ghodss/yaml"
+
 	"github.com/go-kratos/kratos/v2/config/parser"
 )
 

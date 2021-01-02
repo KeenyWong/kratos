@@ -20,6 +20,7 @@ func run(cmd *cobra.Command, args []string) {
 	input := []string{"--go_out=paths=source_relative:.", "--go-grpc_out=paths=source_relative:."}
 	input = append(input, args...)
 	do := exec.Command("protoc", input...)
+	fmt.Println("run ", do.String())
 	out, err := do.CombinedOutput()
 	if err != nil {
 		log.Fatalf("failed to execute: %s\n", err)

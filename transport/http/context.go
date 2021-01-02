@@ -7,7 +7,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// ServerInfo is HTTP server infomation.
+// ServerInfo is HTTP server information.
 type ServerInfo struct {
 	Request  *http.Request
 	Response http.ResponseWriter

@@ -7,9 +7,10 @@ import (
 	"net/http"
 	"strings"
 
+	"google.golang.org/protobuf/types/known/anypb"
+
 	"github.com/go-kratos/kratos/v2/encoding"
 	"github.com/go-kratos/kratos/v2/errors"
-	"google.golang.org/protobuf/types/known/anypb"
 )
 
 const (

@@ -1,18 +1,17 @@
-package rolling
+package point
 
 import (
-	"testing"
-
-	"github.com/go-kratos/kratos/v2/metrics/point"
+	"github.com/go-kratos/kratos/v2/metrics/rolling"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestCount(t *testing.T) {
-	opts := point.PointGaugeOpts{Size: 10}
-	pointGauge := point.NewPointGauge(opts)
+	opts := PointGaugeOpts{Size: 10}
+	pointGauge := NewPointGauge(opts)
 	for i := 0; i < opts.Size; i++ {
 		pointGauge.Add(int64(i))
 	}
-	result := pointGauge.Reduce(Count)
+	result := pointGauge.Reduce(rolling.Count)
 	assert.Equal(t, float64(10), result, "validate count of pointGauge")
 }

@@ -70,7 +70,6 @@ func genService(gen *protogen.Plugin, file *protogen.File, g *protogen.Generated
 		} else {
 			path := fmt.Sprintf("/%s/%s", service.Desc.FullName(), method.Desc.Name())
 			sd.Methods = append(sd.Methods, buildMethodDesc(method, "POST", path))
-
 		}
 	}
 	g.P(sd.execute())

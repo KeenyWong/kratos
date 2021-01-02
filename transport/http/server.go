@@ -4,9 +4,10 @@ import (
 	"context"
 	"net/http"
 
+	"github.com/gorilla/mux"
+
 	"github.com/go-kratos/kratos/v2/middleware"
 	"github.com/go-kratos/kratos/v2/transport"
-	"github.com/gorilla/mux"
 )
 
 // SupportPackageIsVersion1 These constants should not be referenced from any other code.
@@ -89,7 +90,6 @@ func (s *Server) RegisterService(sd *ServiceDesc, ss interface{}) {
 
 func (s *Server) registerHandle(srv interface{}, md MethodDesc) {
 	s.router.HandleFunc(md.Path, func(res http.ResponseWriter, req *http.Request) {
-
 		handler := func(ctx context.Context, in interface{}) (interface{}, error) {
 			return md.Handler(srv, ctx, req)
 		}
@@ -110,6 +110,5 @@ func (s *Server) registerHandle(srv interface{}, md MethodDesc) {
 			s.opts.errorEncoder(req.Context(), err, res, req)
 			return
 		}
-
 	}).Methods(md.Method)
 }

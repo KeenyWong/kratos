@@ -149,5 +149,4 @@ func testConfig(t *testing.T, c Config) {
 	if _, err := c.Value("not_found_key").Bool(); err == nil {
 		t.Logf("not_found_key not match: %v", err)
 	}
-
 }
